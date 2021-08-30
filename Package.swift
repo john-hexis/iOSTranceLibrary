@@ -5,9 +5,6 @@ import PackageDescription
 
 let package = Package(
     name: "TranceLibrary",
-    platforms: [
-        .iOS(.v12)
-    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -29,3 +26,11 @@ let package = Package(
             dependencies: ["TranceLibrary"]),
     ]
 )
+
+if #available(iOS 12, *) {
+    package.platforms = [ .iOS(.v12) ]
+} else if #available(iOS 11, *) {
+    package.platforms = [ .iOS(.v11) ]
+} else {
+    package.platforms = [ .iOS(.v10) ]
+}

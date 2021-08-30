@@ -12,4 +12,11 @@ protocol ViewBuilderProtocol {
     associatedtype U: UIView
     func build() -> U
 }
+#else
+import Foundation
+
+protocol ViewBuilderProtocol {
+    associatedtype U
+    func build() -> U
+}
 #endif
