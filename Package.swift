@@ -28,9 +28,9 @@ let package = Package(
 )
 
 if #available(iOS 12, *) {
-    package.platforms = [ .iOS(.v12) ]
+    package.platforms = [ .iOS(.v12), .macOS(.v11), .tvOS(.v14), .watchOS(.v7) ]
 } else if #available(iOS 11, *) {
-    package.platforms = [ .iOS(.v11) ]
+    package.platforms = [ .iOS(.v11), .macOS(.v11), .tvOS(.v14), .watchOS(.v7) ]
 } else {
-    package.platforms = [ .iOS(.v10) ]
+    package.platforms = [ .iOS(.v10), .macOS(.v11), .tvOS(.v14), .watchOS(.v7) ]
 }
