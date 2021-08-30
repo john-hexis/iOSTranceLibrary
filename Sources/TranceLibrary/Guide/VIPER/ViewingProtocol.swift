@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol IViewing{
-    var presenter: IPresenting { get set }
+protocol ViewingProtocol{
+    var presenter: PresentingProtocol { get set }
 }

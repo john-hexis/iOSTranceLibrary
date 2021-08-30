@@ -1,3 +1,3 @@
-# TranceLibrary
+# iOSTranceLibrary
 
-A description of this package.
+An various of library by John-Hexis

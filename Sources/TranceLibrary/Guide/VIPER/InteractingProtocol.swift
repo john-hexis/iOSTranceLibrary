@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol IInteracting {
-    var repositories: IRepositoring { get set }
+protocol InteractingProtocol {
+    var repositories: RepositoringProtocol { get set }
 }

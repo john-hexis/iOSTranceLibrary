@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol IPresenting {
-    var interactor: IInteracting { get set }
+protocol PresentingProtocol {
+    var interactor: InteractingProtocol { get set }
 }
