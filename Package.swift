@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "TranceLibrary",
+    platforms: [ .iOS(.v11) ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(name: "TranceLibrary", targets: ["TranceLibrary"])
@@ -24,6 +25,3 @@ let package = Package(
             dependencies: ["TranceLibrary"]),
     ]
 )
-
-
-package.platforms = [ .iOS(.v11), .macOS(.v11), .tvOS(.v14), .watchOS(.v7) ]
