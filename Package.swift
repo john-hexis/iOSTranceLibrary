@@ -7,9 +7,7 @@ let package = Package(
     name: "TranceLibrary",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "TranceLibrary",
-            targets: ["TranceLibrary"]),
+        .library(name: "TranceLibrary", targets: ["TranceLibrary"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -27,10 +25,5 @@ let package = Package(
     ]
 )
 
-if #available(iOS 12, *) {
-    package.platforms = [ .iOS(.v12), .macOS(.v11), .tvOS(.v14), .watchOS(.v7) ]
-} else if #available(iOS 11, *) {
-    package.platforms = [ .iOS(.v11), .macOS(.v11), .tvOS(.v14), .watchOS(.v7) ]
-} else {
-    package.platforms = [ .iOS(.v10), .macOS(.v11), .tvOS(.v14), .watchOS(.v7) ]
-}
+
+package.platforms = [ .iOS(.v11), .macOS(.v11), .tvOS(.v14), .watchOS(.v7) ]

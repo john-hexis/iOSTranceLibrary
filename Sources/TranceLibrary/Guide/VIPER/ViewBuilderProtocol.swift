@@ -1,22 +1,22 @@
 //
-//  IBuilder.swift
+//  ViewBuilderProtocol.swift
 //  
 //
-//  Created by John Harries on 30/8/21.
+//  Created by John Harries on 31/8/21.
 //
+
 #if canImport(UIKit)
-import Foundation
-import UIKit
+    import UIKit
 
-protocol ViewBuilderProtocol {
-    associatedtype U: UIView
-    func build() -> U
-}
+    protocol ViewBuilderProtocol {
+        associatedtype U: UIView
+        func build() -> U
+    }
 #else
-import Foundation
+    import Foundation
 
-protocol ViewBuilderProtocol {
-    associatedtype U
-    func build() -> U
-}
+    protocol ViewBuilderProtocol {
+        associatedtype U
+        func build() -> U
+    }
 #endif
